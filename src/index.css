@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --theme-primary: #ee4f7c;
+    --theme-primary-hover: #db2e62;
+    --theme-light: #fff5f7;
+    --theme-soft: #ffe4ea;
+    --theme-border: #ffd0dc;
+    --theme-bg: #fffbfd;
+    --theme-card: rgba(255, 255, 255, 0.85);
+    --theme-card-border: rgba(255, 208, 220, 0.5);
+    --theme-text: #4a3b43;
+    --theme-muted: #8c7680;
+    --theme-accent: #f77e9f;
+  }
+
+  .theme-coquette {
+    --theme-primary: #e11d48;
+    --theme-primary-hover: #be123c;
+    --theme-light: #fff1f2;
+    --theme-soft: #ffe4e6;
+    --theme-border: #fecdd3;
+    --theme-bg: #fffafb;
+    --theme-card: rgba(255, 255, 255, 0.9);
+    --theme-card-border: rgba(254, 205, 211, 0.6);
+    --theme-text: #4c1d28;
+    --theme-muted: #884a59;
+    --theme-accent: #fb7185;
+  }
+
+  .theme-lavender {
+    --theme-primary: #9333ea;
+    --theme-primary-hover: #7e22ce;
+    --theme-light: #faf5ff;
+    --theme-soft: #f3e8ff;
+    --theme-border: #e9d5ff;
+    --theme-bg: #fdfaff;
+    --theme-card: rgba(255, 255, 255, 0.85);
+    --theme-card-border: rgba(233, 213, 255, 0.5);
+    --theme-text: #3b284c;
+    --theme-muted: #78628b;
+    --theme-accent: #c084fc;
+  }
+
+  .theme-strawberry {
+    --theme-primary: #f43f5e;
+    --theme-primary-hover: #e11d48;
+    --theme-light: #fff1f2;
+    --theme-soft: #ffe4e6;
+    --theme-border: #fecdd3;
+    --theme-bg: #fff9fa;
+    --theme-card: rgba(255, 255, 255, 0.9);
+    --theme-card-border: rgba(254, 205, 211, 0.5);
+    --theme-text: #4c262d;
+    --theme-muted: #8a5862;
+    --theme-accent: #fb7185;
+  }
+
+  .theme-cloudy {
+    --theme-primary: #0284c7;
+    --theme-primary-hover: #0369a1;
+    --theme-light: #f0f9ff;
+    --theme-soft: #e0f2fe;
+    --theme-border: #bae6fd;
+    --theme-bg: #f8fcff;
+    --theme-card: rgba(255, 255, 255, 0.88);
+    --theme-card-border: rgba(186, 230, 253, 0.5);
+    --theme-text: #1e3a5f;
+    --theme-muted: #537599;
+    --theme-accent: #38bdf8;
+  }
+
+  .theme-garden {
+    --theme-primary: #059669;
+    --theme-primary-hover: #047857;
+    --theme-light: #ecfdf5;
+    --theme-soft: #d1fae5;
+    --theme-border: #a7f3d0;
+    --theme-bg: #f9fefb;
+    --theme-card: rgba(255, 255, 255, 0.88);
+    --theme-card-border: rgba(167, 243, 208, 0.5);
+    --theme-text: #1b4332;
+    --theme-muted: #4e7a64;
+    --theme-accent: #34d399;
+  }
+
+  .theme-butterfly {
+    --theme-primary: #6366f1;
+    --theme-primary-hover: #4f46e5;
+    --theme-light: #eef2ff;
+    --theme-soft: #e0e7ff;
+    --theme-border: #c7d2fe;
+    --theme-bg: #fafbff;
+    --theme-card: rgba(255, 255, 255, 0.9);
+    --theme-card-border: rgba(199, 210, 254, 0.5);
+    --theme-text: #312e81;
+    --theme-muted: #6366f1;
+    --theme-accent: #818cf8;
+  }
+
+  .theme-cozy-evening {
+    --theme-primary: #d97706;
+    --theme-primary-hover: #b45309;
+    --theme-light: #fffbeb;
+    --theme-soft: #fef3c7;
+    --theme-border: #fde68a;
+    --theme-bg: #fffdf5;
+    --theme-card: rgba(255, 255, 255, 0.92);
+    --theme-card-border: rgba(253, 230, 138, 0.6);
+    --theme-text: #451a03;
+    --theme-muted: #92400e;
+    --theme-accent: #fbbf24;
+  }
+
+  .dark {
+
+    --theme-primary: #f472b6;
+    --theme-primary-hover: #ec4899;
+    --theme-light: #20111f;
+    --theme-soft: #2e172d;
+    --theme-border: #4d2349;
+    --theme-bg: #150a14;
+    --theme-card: rgba(33, 17, 31, 0.85);
+    --theme-card-border: rgba(89, 41, 84, 0.5);
+    --theme-text: #fce7f3;
+    --theme-muted: #d4a5c5;
+    --theme-accent: #fbcfe8;
+  }
+
+  body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.6);
+}
+
+/* Glassmorphism helpers */
+.glass-card {
+  background: var(--theme-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-card-border);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-right: 1px solid var(--theme-card-border);
+}
+
+.dark .glass-nav {
+  background: rgba(25, 10, 24, 0.88);
+}
+
+/* Custom button and interactive utilities */
+.cozy-button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cozy-button:hover {
+  transform: translateY(-2px);
+}
+.cozy-button:active {
+  transform: translateY(0);
+}
+
+/* Gentle sparkle animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s infinite;
+}
